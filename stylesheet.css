@@ -1,0 +1,310 @@
+#pagination {
+    font-size: 1.5rem;
+}
+
+@font-face {
+    font-family: "Kremlin";
+    src: url('/kremlin.ttf') format("truetype");
+}
+
+#preview_headline a:link,
+#preview_headline a:visited,
+#preview_headline a:hover,
+a:link,
+a:visited,
+a:hover {
+    color: #1d2129;
+}
+
+body {
+    background-color: black;
+}
+
+.container-fluid {
+    background-color: white;
+}
+
+.sides {
+    background-color: grey
+}
+
+#dot {
+    font-size: 50%;
+}
+
+#footer {
+    background: black;
+    color: white;
+    margin-top: 2rem;
+}
+
+#col_wrapper,
+#top_stories {
+    padding: 0 1rem;
+}
+
+button {
+    color: white;
+    background-color: black;
+    text-transform: uppercase;
+}
+
+#more_button,
+#generate_wrapper {
+    margin: 0 0 1.5rem 1rem;
+}
+
+h1,
+h2,
+h4,
+button {
+    font-family: 'Kremlin', Tahoma, Verdana, Segoe, sans-serif;
+}
+
+h1,
+h2 {
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    margin: 0 .25rem 0 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+}
+
+h2 {
+    font-size: 1rem;
+}
+
+#header {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background: black;
+}
+
+h3 {
+    margin-top: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#adblocker,
+#noresults {
+    color: red;
+    display: none;
+}
+
+#results {
+    display: none;
+}
+
+#the_url {
+    border: thick solid grey;
+    padding: 1rem;
+    font-size: 1rem;
+    margin: 1rem 0 2rem;
+    text-align: center;
+    word-break: break-all;
+}
+
+.preview_wrapper {
+    min-height: 340px;
+    margin: 0 2rem 2rem 1rem;
+    word-wrap: break-word;
+}
+
+.preview {
+    width: 476px;
+    border: 1px lightgrey solid;
+    position: relative;
+    padding-bottom: 2.5rem;
+}
+
+.preview_graphic {
+    height: 209px;
+    width: 476px;
+    background-size: cover;
+    background-position-y: center;
+}
+
+.preview_headline {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+    color: #1d2129;
+    line-height: 22px;
+    margin: .5rem;
+}
+
+.preview_description {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+    color: #1d2129;
+    margin: 0 .5rem;
+    max-height: 50px;
+    overflow: hidden;
+}
+
+.preview_domain {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #90949c;
+    position: absolute;
+    left: .5rem;
+    bottom: .5rem;
+    text-transform: uppercase;
+}
+
+#preview_column {
+    overflow: hidden;
+}
+
+label {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.form-check-inline {
+    margin-bottom: 2rem;
+}
+
+#search {
+    cursor: pointer;
+}
+
+h4 {
+    font-size: 1rem;
+    margin: .5rem 0 .75rem 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+h1 a:link,
+h1 a:visited,
+h1 a:hover,
+h4 a:link,
+h4 a:visited,
+h4 a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+h2 a:link,
+h2 a:visited,
+h2 a:hover {
+    color: red;
+    text-decoration: none;
+}
+
+h4 a:hover {
+    border-bottom: .1rem solid white;
+}
+
+#graphic_wrapper {
+    margin-bottom: .5rem;
+}
+
+#more_button {
+    margin: 2rem 0;
+}
+
+#graphic_group {
+    min-height: 8rem;
+    margin-bottom: -1rem;
+}
+
+#copy_span {
+    text-decoration: underline;
+}
+
+#copy {
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
+
+.topstories {
+    float: left;
+    clear: right;
+    margin: 0 2rem 1rem 0;
+    min-height: 400px;
+}
+
+ ::placeholder {
+    color: darkgray !important;
+    opacity: 1;
+    /* Firefox */
+}
+
+ :-ms-input-placeholder {
+    color: #C0C0C0 !important;
+}
+
+ ::-ms-input-placeholder {
+    color: #C0C0C0 !important;
+}
+
+#share_buttons {
+    float: right;
+    width: 20rem;
+}
+
+h4 {
+    float: left;
+}
+
+#fb_button,
+#twitter-widget-0 {
+    float: right;
+    margin: .5rem 0 .5rem .5rem;
+}
+
+#twitter-widget-0 {
+    clear: left;
+}
+
+.sans {
+    font-family: sans-serif;
+}
+
+#menu_1 {
+    border-bottom: 2px solid red;
+}
+
+.buttons {
+    position: absolute;
+    right: .25rem;
+    bottom: 0;
+}
+
+#adsense_wrapper {
+    padding: 1rem;
+}
+
+@media screen and (max-width:500px) {
+    .preview {
+        width: auto;
+    }
+    .preview_graphic {
+        width: 20rem;
+        height: 12rem;
+    }
+    #main_preview_wrapper {
+        margin: 0 0 2rem 0;
+    }
+    #main_preview_graphic {
+        width: auto;
+    }
+    .topstories {
+        margin: 0 2rem 2rem 0;
+    }
+    #adsense_wrapper,
+    #generate_wrapper {
+        text-align: center;
+    }
+    #generate_wrapper {
+        margin-left: 0;
+    }
+}

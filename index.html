@@ -1,0 +1,976 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAAAAABWESUoAAABCElEQVQ4y2NgGAXUArrzoWC6+/z5ZQwMjG3zp+bCxNoYGRh8/sNA5f//T3gZmJ78/7MDJvSUiYHB4///v9+A4PvLQqDIdk6GG//frfv//zdI7Md5iIJjQkJCwgry/iA9m7gughVMU1CUExLmZwAruB4ZGRnMxOAJNnXrHbCCFgYGjogIL0awAhD4K8XgBbMZpKCdgUHr///HTHAFv8AKTm9HUqDx9/81iIJroWFhgZwgBbu490IVNDMwKMIV7IeECFDBYQahExAFszQ0POEKDsEVAFliz8EK/v39++8/WAEwoM5CFPhBWA+RAgrkSK1p0wohCnTALMbaaV1pU6eAwbQaxtG0SC0AACLI4fzl4acvAAAAAElFTkSuQmCC"
+    />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#000000" />
+
+    <?php 
+
+$domains = array("cbsnews.us","thenewyorktimes.company","hannnity.com","theasociatedpress.com","microwavetinfoil.com","thefakenewsgenerator.com","tonightat11.tv","nbc-news.org","the-los-angeles-times.com","cbs-news.us");
+
+         if(isset($_GET['headline'])) 
+         {
+         
+$headline = base64_decode($_GET['headline']);
+$description = base64_decode($_GET['description']);
+$graphic = base64_decode($_GET['graphic']);
+$domain = $domains[$_GET['domain']];
+$hash = rawurldecode($_SERVER['REQUEST_URI']);
+                 
+         echo '<meta property="og:title" content="'.$headline.'" />'."\n";
+         echo '<meta property="og:url" content="http://'.$domain.$hash.'" />'."\n";
+         echo '<meta property="og:description" content="'.$description.'" />'."\n";
+         echo '<meta property="og:image" content="'.$graphic.'" />'."\n";
+         echo '<meta name="description" content="'.$description.'" />'."\n";
+echo '<title>'.$headline.' - '.strtoupper($domain).'</title>';
+
+
+         }
+         else
+         {
+         echo '<title>The Fake News Generator</title>';
+         echo '<meta property="og:title" content="The Fake News Generator" />'."\n";
+         echo '<meta property="og:url" content="https://www.thefakenewsgenerator.com" />'."\n";
+         echo '<meta property="og:description" content="Make fake news stories to fool your friends and maybe even the masses. From the creator of Push Trump Off A Cliff Again!" />'."\n";
+         echo '<meta property="og:image" content="https://www.thefakenewsgenerator.com/logo.png" />'."\n";
+         echo '<meta name="description" content="Make fake news stories to fool your friends and maybe even the masses. From the creator of Push Trump Off A Cliff Again!" />'."\n";
+         echo '<meta name="twitter:site" content="@TheFakeNewsGen" />'."\n";
+    	
+         }
+            
+         ?>
+    <meta name="twitter:card" content="photo" />
+    <meta property="fb:app_id" content="194118543987244" />
+
+    <link rel="stylesheet" type="text/css" href="/stylesheet.css" />
+
+    <script async src="//www.googletagmanager.com/gtag/js?id=UA-115759797-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-115759797-1');
+    </script>
+    <script type="text/javascript">
+        var addthis_config = {
+            "data_track_clickback": true
+        };
+    </script>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5aa34301f9144de2"></script>
+    <style>
+        #menu_1 {
+            border-bottom: 2px solid red;
+        }
+        
+        #menu_2 {
+            border: 0;
+        }
+    </style>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-9969357671169601",
+            enable_page_level_ads: true
+        });
+    </script>
+
+</head>
+
+<body>
+    <div id="fb-root"></div>
+    <script>
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12&autoLogAppEvents=1&app_id=194118543987244';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12" id="header">
+                <h1><a href="https://www.thefakenewsgenerator.com/">The Fake News Generator</a></h1>
+                <h2>
+                    <a href="https://www.thefakenewsgenerator.com/" id="menu_1">Main</a> <span class="sans">/</span> <a href="https://www.thefakenewsgenerator.com/topstories/" id="menu_2">Top Stories</a><span class="sans">/</span> <a href="https://www.youtube.com/tonightat11"
+                        target="_blank">Tonight at 11 - YouTube</a></h2>
+            </div>
+        </div>
+        <div class="row">
+
+            <div id="col_wrapper" class="col-12 col-md-6">
+                <div id="results">
+                    <h3>Here is your link:</h3>
+                    <div id="the_url"></div>
+                    <h3 id="copy"><span id="copy_span">Copy To Clipboard</span>&nbsp;&#x1F4CB;</h3>
+                    <h3>Share now on social media:</h3>
+                    <div class="addthis_inline_share_toolbox"></div>
+                    <button id="more_button" class="btn btn-lg" tabindex="0" onclick="newGame()">Generate More Fake News</button>
+                </div>
+                <div id="main">
+                    <div class="form-group">
+                        <label for="headline">Headline:</label>
+                        <input type="text" class="form-control" id="headline" maxlength="100">
+                        <small id="headlineHelp" class="form-text text-muted">Maximum 100 characters.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description:</label>
+                        <textarea class="form-control" id="description" rows="3" maxlength="200"></textarea>
+                        <small id="descriptionHelp" class="form-text text-muted">Maximum 200 characters.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="domain">Fake News Site:</label>
+                        <select id="domain" class="form-control">
+                            <!--
+                               <option value="0" selected>cbsnews.us</option> 
+ <option value="1">thenewyorktimes.company</option>
+  <option value="7">nbc-news.org</option>
+   <option value="8">the-los-angeles-times.com</option>
+<option value="2">hannnity.com</option>
+<option value="3">theasociatedpress.com</option>
+
+ -->
+ 
+  <option value="9">cbs-news.us</option>
+   <option value="6">tonightat11.tv</option>
+<option value="4">microwavetinfoil.com</option>
+ <option value="5">thefakenewsgenerator.com</option>
+ 
+
+                             
+                            </select>
+                    </div>
+
+                    <!--
+                    <div class="form-group">
+                        <label for="headline">Your Name:</label>
+                        <input type="text" class="form-control" id="highscore" maxlength="20">
+                        <small id="highscoreHelp" class="form-text text-muted">Optional. Maximum 20 characters. Featured on Top News stories.</small>
+                    </div>
+-->
+
+                    <div class="form-group">
+                        <label for="headline">Search Flickr for Graphic:</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="topic" maxlength="50">
+                            <div class="input-group-append">
+                                <span class="input-group-text" tabindex="0" id="search" onclick="flickr_search($('#topic').val())">Search</span>
+                            </div>
+                        </div>
+                        <small id="topicHelp" class="form-text text-muted">Maximum 50 characters. <span id="noresults">No results found.</span> <span id="adblocker">Please disable your ad blocker or allow access to flickr.com to continue.</span> </small>
+                    </div>
+                    <div class="form-group" id="graphic_group">
+                        <label>Graphic:</label> <br />
+                        <div id="graphic_wrapper">
+                            <span id="thumbnails">
+                        </span>
+                            <div id="refresh" title="Load New Images" onclick="flickr_search($('#topic').val())" class="form-check form-check-inline"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Main -->
+            </div>
+            <!-- Col_wrapper -->
+            <div id="preview_column" class="col-12 col-md-6">
+                <div id="main_preview_wrapper" class="preview_wrapper">
+                    <label id="main_preview_label" class="preview_label">Preview:</label>
+                    <div id="main_preview" class="preview">
+                        <div id="main_preview_graphic" class="preview_graphic" /></div>
+                    <div id="main_preview_headline" class="preview_headline"></div>
+                    <div id="main_preview_description" class="preview_description"></div>
+                    <div id="main_preview_domain" class="preview_domain">cbsnews.us</div>
+                </div>
+            </div>
+            <div id="generate_wrapper">
+                <button onclick="generate()" id="generate" class="btn btn-lg" tabindex="0" disabled>Generate Link</button>
+                <small id="generateHelp" class="form-text text-muted">Headline and description are required.</small>
+            </div>
+
+            <div id="adsense_wrapper" style="text-align: center;">
+
+                <div id="adsense_right" style="float: left; ">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- Row -->
+    <div class="row">
+        <div class="col-12" id="footer">
+            <h4> <span class="sans">&copy;</span> 2018 <a href="https://justinhook.com" target="_blank">Justin Hook</a></h4>
+            <div id="share_buttons">
+
+                <div id="fb_button" class="fb-like" data-href="https://www.facebook.com/TheFakeNewsGenerator/" data-layout="button" data-action="like" data-size="large" data-show-faces="false">
+                </div>
+                <a href="https://twitter.com/TheFakeNewsGen?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @TheFakeNewsGen</a>
+                <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+            </div>
+            <!-- share -->
+        </div>
+        <!-- footer -->
+    </div>
+    <!-- Row -->
+    </div>
+    <!-- main wrapper-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <script>
+        (function() {
+
+            // Default configuration
+            var defaultConfig = {
+                api_uri: 'https://api.flickr.com/services/rest/',
+                api_key: null
+            };
+
+            // Constructor
+            window.Flickr = function(userConfig) {
+                this.config = defaultConfig;
+                for (var i in userConfig) {
+                    if (!userConfig.hasOwnProperty(i)) continue;
+                    this.config[i] = userConfig[i];
+                }
+            };
+
+            // Temporary array for callbacks
+            window.Flickr._jsonCallback = [];
+
+            // Generic request method
+            window.Flickr.prototype.request = function(params, callback) {
+                var
+                    id = Math.round(Math.random() * 1e9), // Generate a random ID for the request
+                    s = document.createElement('script'),
+                    r = document.getElementsByTagName('script')[0],
+                    args = [],
+                    i;
+
+                // Append additional parameters to the request
+                params.format = 'json';
+                params.api_key = this.config.api_key;
+                params.jsoncallback = 'Flickr._jsonCallback[' + id + ']';
+
+                // "Serialize" parameters
+                for (i in params) {
+                    if (!params.hasOwnProperty(i)) continue;
+                    args.push(i + '=' + params[i]);
+                }
+
+                // Store the callback in the temporary array
+                window.Flickr._jsonCallback[id] = this._handleResponse.bind(this, id, callback, s);
+
+                // Construct the request then append the script element in the page
+                s.src = this.config.api_uri + '?' + args.join('&');
+                r.parentNode.insertBefore(s, r);
+            };
+
+            // Generic response handler
+            window.Flickr.prototype._handleResponse = function(id, callback, script, res) {
+                // Cleaning
+                delete window.Flickr._jsonCallback[id];
+                script.parentNode.removeChild(script);
+
+                // Handle errors
+                if (res.stat === 'fail') return callback(res, null);
+
+                // Return the request results to the callback
+                callback(null, res);
+            };
+
+            // Photo search helper
+            window.Flickr.prototype.search = function(params, callback) {
+                params.method = 'flickr.photos.search';
+                params.extras = params.extras || 'url_t,url_q';
+                params.per_page = params.per_page || 50;
+                this.request(params, callback);
+            };
+
+            // Interesting photos helper
+            window.Flickr.prototype.interesting = function(params, callback) {
+                params.method = 'flickr.interestingness.getList';
+                params.extras = params.extras || 'url_l';
+                params.per_page = params.per_page || 50;
+                this.request(params, callback);
+            };
+
+        })();
+
+        var hash_description = <?php echo json_encode($description) ?>;
+        var hash_graphic = "<?php echo $graphic ?>";
+        var hash_domain = "<?php echo $domain ?>";
+        var hash = "<?php echo $hash ?>";
+        var hash_headline = "<?php echo $headline ?>";
+        //     var hash_old_headline = "<?php echo substr($hash,12,strrpos($hash, '/')-12) ?>";
+        if (typeof Flickr === "undefined") {
+            $("#adblocker").show();
+        } else {
+            var flickr = new Flickr({
+                api_key: '47c2c7f03c4884a5d33ca5673d4a7920'
+            });
+        }
+        var flickr_data = "";
+        var selected_photo = "";
+        // all HTML4 entities as defined here: http://www.w3.org/TR/html4/sgml/entities.html
+        // added: amp, lt, gt, quot and apos
+        escapeHtmlEntities.entityTable = {
+            34: 'quot',
+            38: 'amp',
+            39: 'apos',
+            60: 'lt',
+            62: 'gt',
+            160: 'nbsp',
+            161: 'iexcl',
+            162: 'cent',
+            163: 'pound',
+            164: 'curren',
+            165: 'yen',
+            166: 'brvbar',
+            167: 'sect',
+            168: 'uml',
+            169: 'copy',
+            170: 'ordf',
+            171: 'laquo',
+            172: 'not',
+            173: 'shy',
+            174: 'reg',
+            175: 'macr',
+            176: 'deg',
+            177: 'plusmn',
+            178: 'sup2',
+            179: 'sup3',
+            180: 'acute',
+            181: 'micro',
+            182: 'para',
+            183: 'middot',
+            184: 'cedil',
+            185: 'sup1',
+            186: 'ordm',
+            187: 'raquo',
+            188: 'frac14',
+            189: 'frac12',
+            190: 'frac34',
+            191: 'iquest',
+            192: 'Agrave',
+            193: 'Aacute',
+            194: 'Acirc',
+            195: 'Atilde',
+            196: 'Auml',
+            197: 'Aring',
+            198: 'AElig',
+            199: 'Ccedil',
+            200: 'Egrave',
+            201: 'Eacute',
+            202: 'Ecirc',
+            203: 'Euml',
+            204: 'Igrave',
+            205: 'Iacute',
+            206: 'Icirc',
+            207: 'Iuml',
+            208: 'ETH',
+            209: 'Ntilde',
+            210: 'Ograve',
+            211: 'Oacute',
+            212: 'Ocirc',
+            213: 'Otilde',
+            214: 'Ouml',
+            215: 'times',
+            216: 'Oslash',
+            217: 'Ugrave',
+            218: 'Uacute',
+            219: 'Ucirc',
+            220: 'Uuml',
+            221: 'Yacute',
+            222: 'THORN',
+            223: 'szlig',
+            224: 'agrave',
+            225: 'aacute',
+            226: 'acirc',
+            227: 'atilde',
+            228: 'auml',
+            229: 'aring',
+            230: 'aelig',
+            231: 'ccedil',
+            232: 'egrave',
+            233: 'eacute',
+            234: 'ecirc',
+            235: 'euml',
+            236: 'igrave',
+            237: 'iacute',
+            238: 'icirc',
+            239: 'iuml',
+            240: 'eth',
+            241: 'ntilde',
+            242: 'ograve',
+            243: 'oacute',
+            244: 'ocirc',
+            245: 'otilde',
+            246: 'ouml',
+            247: 'divide',
+            248: 'oslash',
+            249: 'ugrave',
+            250: 'uacute',
+            251: 'ucirc',
+            252: 'uuml',
+            253: 'yacute',
+            254: 'thorn',
+            255: 'yuml',
+            402: 'fnof',
+            913: 'Alpha',
+            914: 'Beta',
+            915: 'Gamma',
+            916: 'Delta',
+            917: 'Epsilon',
+            918: 'Zeta',
+            919: 'Eta',
+            920: 'Theta',
+            921: 'Iota',
+            922: 'Kappa',
+            923: 'Lambda',
+            924: 'Mu',
+            925: 'Nu',
+            926: 'Xi',
+            927: 'Omicron',
+            928: 'Pi',
+            929: 'Rho',
+            931: 'Sigma',
+            932: 'Tau',
+            933: 'Upsilon',
+            934: 'Phi',
+            935: 'Chi',
+            936: 'Psi',
+            937: 'Omega',
+            945: 'alpha',
+            946: 'beta',
+            947: 'gamma',
+            948: 'delta',
+            949: 'epsilon',
+            950: 'zeta',
+            951: 'eta',
+            952: 'theta',
+            953: 'iota',
+            954: 'kappa',
+            955: 'lambda',
+            956: 'mu',
+            957: 'nu',
+            958: 'xi',
+            959: 'omicron',
+            960: 'pi',
+            961: 'rho',
+            962: 'sigmaf',
+            963: 'sigma',
+            964: 'tau',
+            965: 'upsilon',
+            966: 'phi',
+            967: 'chi',
+            968: 'psi',
+            969: 'omega',
+            977: 'thetasym',
+            978: 'upsih',
+            982: 'piv',
+            8226: 'bull',
+            8230: 'hellip',
+            8242: 'prime',
+            8243: 'Prime',
+            8254: 'oline',
+            8260: 'frasl',
+            8472: 'weierp',
+            8465: 'image',
+            8476: 'real',
+            8482: 'trade',
+            8501: 'alefsym',
+            8592: 'larr',
+            8593: 'uarr',
+            8594: 'rarr',
+            8595: 'darr',
+            8596: 'harr',
+            8629: 'crarr',
+            8656: 'lArr',
+            8657: 'uArr',
+            8658: 'rArr',
+            8659: 'dArr',
+            8660: 'hArr',
+            8704: 'forall',
+            8706: 'part',
+            8707: 'exist',
+            8709: 'empty',
+            8711: 'nabla',
+            8712: 'isin',
+            8713: 'notin',
+            8715: 'ni',
+            8719: 'prod',
+            8721: 'sum',
+            8722: 'minus',
+            8727: 'lowast',
+            8730: 'radic',
+            8733: 'prop',
+            8734: 'infin',
+            8736: 'ang',
+            8743: 'and',
+            8744: 'or',
+            8745: 'cap',
+            8746: 'cup',
+            8747: 'int',
+            8756: 'there4',
+            8764: 'sim',
+            8773: 'cong',
+            8776: 'asymp',
+            8800: 'ne',
+            8801: 'equiv',
+            8804: 'le',
+            8805: 'ge',
+            8834: 'sub',
+            8835: 'sup',
+            8836: 'nsub',
+            8838: 'sube',
+            8839: 'supe',
+            8853: 'oplus',
+            8855: 'otimes',
+            8869: 'perp',
+            8901: 'sdot',
+            8968: 'lceil',
+            8969: 'rceil',
+            8970: 'lfloor',
+            8971: 'rfloor',
+            9001: 'lang',
+            9002: 'rang',
+            9674: 'loz',
+            9824: 'spades',
+            9827: 'clubs',
+            9829: 'hearts',
+            9830: 'diams',
+            338: 'OElig',
+            339: 'oelig',
+            352: 'Scaron',
+            353: 'scaron',
+            376: 'Yuml',
+            710: 'circ',
+            732: 'tilde',
+            8194: 'ensp',
+            8195: 'emsp',
+            8201: 'thinsp',
+            8204: 'zwnj',
+            8205: 'zwj',
+            8206: 'lrm',
+            8207: 'rlm',
+            8211: 'ndash',
+            8212: 'mdash',
+            8216: 'lsquo',
+            8217: 'rsquo',
+            8218: 'sbquo',
+            8220: 'ldquo',
+            8221: 'rdquo',
+            8222: 'bdquo',
+            8224: 'dagger',
+            8225: 'Dagger',
+            8240: 'permil',
+            8249: 'lsaquo',
+            8250: 'rsaquo',
+            8364: 'euro',
+            34: 'quot',
+            39: 'apos',
+            96: '&#35;96',
+            65282: '&#35;65282',
+            65287: '&#35;65287'
+        };
+
+        function escapeHtmlEntities(text) {
+            return text.replace(/[\u00A0-\u2666<>\&]/g, function(c) {
+                return '&' +
+                    (escapeHtmlEntities.entityTable[c.charCodeAt(0)] || '#' + c.charCodeAt(0)) + ';';
+            });
+        };
+        var last_search = "";
+
+        function flickr_search(search_term) {
+            search_term = (search_term).replace(/[^A-zÀ-ÿ\s]/g, '').toLowerCase();
+            if (search_term === last_search) {
+
+                flickr_offset += 8;
+                if (flickr_offset >= flickr_data.photos.photo.length)
+                    flickr_offset = 0;
+                continue_flickr();
+
+                return;
+            }
+            last_search = search_term;
+            if (cached_searches.indexOf(search_term) > -1) {
+                $.get("/json/" + search_term.replace(/\s/g, '') + ".json", function(data) {
+                    flickr_data = data;
+                    // console.log("loaded from cache");
+                    continue_flickr();
+                });
+            } else {
+                // console.log('searching');
+                flickr.search({
+                    text: search_term,
+                    media: 'photos',
+                    per_page: 24,
+                    extras: 'owner_name,url_z,url_t',
+                    sort: 'relevance',
+                    safe_search: "1",
+                    license: "1,2,3,4,5,6,7,8,9,10"
+                }, function(err, data) {
+                    if (err) {
+                        console.error(err);
+                        return;
+                    }
+                    //   console.log(data);
+                    flickr_data = data;
+                    gtag('event', search_term, {
+                        'event_category': 'Flickr Search'
+                    });
+                    continue_flickr();
+                })
+            }
+        }
+
+        var flickr_offset = 0;
+
+        function continue_flickr() {
+            if (flickr_data.photos.photo.length === 0) {
+                $("#noresults").show();
+                return;
+            }
+            $("#noresults").hide();
+
+
+
+            for (var i = flickr_offset; i < flickr_data.photos.photo.length && i < flickr_offset + 8; i++) {
+                if (typeof(flickr_data.photos.photo[i].url_t) === "undefined" || typeof(flickr_data.photos.photo[i].url_z) === "undefined") {
+
+                    flickr_offset++;
+                    continue;
+                }
+                if (i === flickr_offset) {
+                    $("#thumbnails").html('<div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" value="' + i + '" checked> <label class="form-check-label"><img src="' + flickr_data.photos.photo[i].url_t + '" title="Photo by ' + flickr_data.photos.photo[i].ownername + '"></label></div>');
+                    if (!fake_news)
+                        $('#main_preview_graphic').css("background-image", 'url("' + flickr_data.photos.photo[i].url_z + '")');
+                    selected_photo = flickr_data.photos.photo[i].id;
+                } else {
+                    $("#thumbnails").append('<div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" value="' + i + '"> <label class="form-check-label"><img src="' + flickr_data.photos.photo[i].url_t + '" title="Photo by ' + flickr_data.photos.photo[i].ownername + '"></label></div>');
+                }
+            }
+            $('input[type=radio][name=inlineRadioOptions]').change(function() {
+                checkForm();
+                //     console.log("radio selected", $(this).val());
+                fake_news = false;
+                var o = $(this).val();
+                selected_photo = flickr_data.photos.photo[o].id;
+                $('#main_preview_graphic').css("background-image", 'url("' + flickr_data.photos.photo[o].url_z + '")');
+            });
+        }
+        var placeholders = [{
+            h: "Donald Trump Achieves World Peace!",
+            s: "Donald Trump",
+            d: " The world rejoiced today as The Apprentice's Donald J. Trump brokered a deal with all nations that would create everlasting peace and prospetiy. The UN agreed to disband in..."
+        }, {
+            h: "IKEA Opens Convenient New Landfill Location",
+            s: "ikea",
+            d: "BOSTON—Solving a problem that has long beset its customers, IKEA today opened its newest location next door to the South End Landfill, allowing customers to purchase their furniture and drop it off at the dump all in one convenient trip."
+        }, {
+            h: "Flint Residents Learn To Harness Superpowers, But Trump Gets Away Again",
+            s: "comic books",
+            d: "FLINT—They developed superpowers after years of drinking from a lead-poisoned water supply. But just having incredible abilities doesn't make them superheroes. Not yet."
+        }, {
+            h: "IBM Watson Exits ‘The View’ After 7 Seasons",
+            s: "jeopardy watson",
+            d: "Citing personal differences with his human co-hosts, Watson announced it would be leaving the show last Friday."
+        }, {
+            h: "Weekly Roommate Dinner Cancelled After Historic 2nd Gathering",
+            s: "dinner friends",
+            d: "NEW YORK—They said it couldn't be done. A weekly roommate dinner with all three roommates in attendance. But these Brooklynites just proved everyone wrong."
+        }, {
+            h: "Echo Park Chipotle To Become Nation’s First ‘Rat Cafe’",
+            s: "chipotle restaurant",
+            d: "LOS ANGELES—Facing increased competition from niche restaurants targeting millennials, the Echo Park Chipotle announced today it would become the nation’s first \“Rat Cafe,\” giving diners the chance to eat a burrito bowl alongside a whole bunch of disgusting rats."
+        }, {
+            h: "Once Thriving Cheeto Driven To Extinction By Unregulated Snack Food Industry",
+            s: "field corn",
+            d: "CHESTER, IA—Where once the cheeto could be found in great numbers, filling the crisp autumn air with a dangerously cheesy aroma, today there isn’t a trace of fluorescent orange to be seen, as overharvesting has all but eliminated the region’s signature export."
+        }, {
+            h: "Eldest Grandson Reigns Supreme With 3 School Pictures On Nana’s Fridge",
+            s: "grandmother",
+            d: "ROCKFORD, MI—After months of intense combat and speculation, James once again emerged as the favored grandson, with a record-setting four pictures on Nana's fridge."
+        }, {
+            h: "Finally, A VR Headset That Gets Nausea Right",
+            s: "virtual reality",
+            d: "Virtual reality companies are in a race to see how fast they can make users vomit. Finally a leader emerges."
+        }];
+        var cached_searches = ["donald trump", "cool photos", "sample photos", "virtual reality", "grandmother", "field corn", "handgun", "chipotle restaurant", "dinner friends", "jeopardy watson", "comic books", "ikea"];
+
+        function placehold() {
+            var placeholder = Math.floor(Math.random() * placeholders.length);
+            $("#headline").attr("placeholder", placeholders[placeholder].h);
+            $("#description").attr("placeholder", placeholders[placeholder].d);
+            $("#main_preview_headline").html(placeholders[placeholder].h);
+            $("#main_preview_description").html(placeholders[placeholder].d);
+            $("#topic").val(placeholders[placeholder].s);
+            flickr_search(placeholders[placeholder].s);
+        }
+        // Create Base64 Object
+        var Base64 = {
+            _keyStr: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",
+            encode: function(e) {
+                var t = "";
+                var n, r, i, s, o, u, a;
+                var f = 0;
+                e = Base64._utf8_encode(e);
+                while (f < e.length) {
+                    n = e.charCodeAt(f++);
+                    r = e.charCodeAt(f++);
+                    i = e.charCodeAt(f++);
+                    s = n >> 2;
+                    o = (n & 3) << 4 | r >> 4;
+                    u = (r & 15) << 2 | i >> 6;
+                    a = i & 63;
+                    if (isNaN(r)) {
+                        u = a = 64
+                    } else if (isNaN(i)) {
+                        a = 64
+                    }
+                    t = t + this._keyStr.charAt(s) + this._keyStr.charAt(o) + this._keyStr.charAt(u) + this._keyStr.charAt(a)
+                }
+                return t
+            },
+            decode: function(e) {
+                var t = "";
+                var n, r, i;
+                var s, o, u, a;
+                var f = 0;
+                e = e.replace(/[^A-Za-z0-9+/=]/g, "");
+                while (f < e.length) {
+                    s = this._keyStr.indexOf(e.charAt(f++));
+                    o = this._keyStr.indexOf(e.charAt(f++));
+                    u = this._keyStr.indexOf(e.charAt(f++));
+                    a = this._keyStr.indexOf(e.charAt(f++));
+                    n = s << 2 | o >> 4;
+                    r = (o & 15) << 4 | u >> 2;
+                    i = (u & 3) << 6 | a;
+                    t = t + String.fromCharCode(n);
+                    if (u != 64) {
+                        t = t + String.fromCharCode(r)
+                    }
+                    if (a != 64) {
+                        t = t + String.fromCharCode(i)
+                    }
+                }
+                t = Base64._utf8_decode(t);
+                return t
+            },
+            _utf8_encode: function(e) {
+                e = e.replace(/rn/g, "n");
+                var t = "";
+                for (var n = 0; n < e.length; n++) {
+                    var r = e.charCodeAt(n);
+                    if (r < 128) {
+                        t += String.fromCharCode(r)
+                    } else if (r > 127 && r < 2048) {
+                        t += String.fromCharCode(r >> 6 | 192);
+                        t += String.fromCharCode(r & 63 | 128)
+                    } else {
+                        t += String.fromCharCode(r >> 12 | 224);
+                        t += String.fromCharCode(r >> 6 & 63 | 128);
+                        t += String.fromCharCode(r & 63 | 128)
+                    }
+                }
+                return t
+            },
+            _utf8_decode: function(e) {
+                var t = "";
+                var n = 0;
+                var r = c1 = c2 = 0;
+                while (n < e.length) {
+                    r = e.charCodeAt(n);
+                    if (r < 128) {
+                        t += String.fromCharCode(r);
+                        n++
+                    } else if (r > 191 && r < 224) {
+                        c2 = e.charCodeAt(n + 1);
+                        t += String.fromCharCode((r & 31) << 6 | c2 & 63);
+                        n += 2
+                    } else {
+                        c2 = e.charCodeAt(n + 1);
+                        c3 = e.charCodeAt(n + 2);
+                        t += String.fromCharCode((r & 15) << 12 | (c2 & 63) << 6 | c3 & 63);
+                        n += 3
+                    }
+                }
+                return t
+            }
+        }
+
+        function checkTime(i) {
+            if (i < 10) {
+                i = "0" + i
+            }; // add zero in front of numbers < 10
+            return i;
+        }
+        var dateObj = new Date();
+        var month = dateObj.getUTCMonth() + 1; //months from 1-12
+        var day = dateObj.getUTCDate();
+        var year = dateObj.getUTCFullYear();
+        month = checkTime(month);
+        year = checkTime(year);
+
+        function newGame() {
+            $("#generateHelp").show();
+            $("#main_preview_label").html('You invented <a href="about:blank" id="the_story" target="_blank">this</a> story. Now make some more!');
+            $("#the_story").attr("href", the_url);
+            fake_news = true;
+            $("#col_wrapper").find("input[type=text], textarea").val("");
+            $("#topic").val("Sample Photos");
+            flickr_search("sample photos");
+            $('#generate').show();
+            $('#results').hide();
+            $('#main').show();
+            $('#copy').html("Copy To Clipboard 📋");
+            $('#copy_span').css("text-decoration", "underline");
+            $('#copy').css("cursor", "pointer");
+        }
+        var the_url = "";
+
+        function generate() {
+            var base58 = (function(alpha) {
+                var alphabet = alpha || '123456789abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ',
+                    base = alphabet.length;
+                return {
+                    encode: function(enc) {
+                        if (typeof enc !== 'number' || enc !== parseInt(enc))
+                            throw '"encode" only accepts integers.';
+                        var encoded = '';
+                        while (enc) {
+                            var remainder = enc % base;
+                            enc = Math.floor(enc / base);
+                            encoded = alphabet[remainder].toString() + encoded;
+                        }
+                        return encoded;
+                    },
+                    decode: function(dec) {
+                        if (typeof dec !== 'string')
+                            throw '"decode" only accepts strings.';
+                        var decoded = 0;
+                        while (dec) {
+                            var alphabetPosition = alphabet.indexOf(dec[0]);
+                            if (alphabetPosition < 0)
+                                throw '"decode" can\'t find "' + dec[0] + '" in the alphabet: "' + alphabet + '"';
+                            var powerOf = dec.length - 1;
+                            decoded += alphabetPosition * (Math.pow(base, powerOf));
+                            dec = dec.substring(1);
+                        }
+                        return decoded;
+                    }
+                };
+            })();
+            // base58.encode(parseInt(selected_photo))
+            var url_headline = encodeURIComponent($("#headline").val().trim().replace(/\W/g, "-"));
+            var url_highscore = ""; /* $("#highscore").val().trim().replace(/\W/g, ""); */
+            var encodedString3 = "";
+            if (url_highscore !== "")
+                encodedString3 = "." + Base64.encode(url_highscore);
+            var the_headline = $("#headline").val().replace(/"/g, '&quot;');
+            var the_description = $("#description").val().replace(/"/g, '&quot;').replace(/\n/g, ' ');
+            var the_domain = $("#domain").val();
+            var encodedString0 = Base64.encode(the_headline);
+            var encodedString1 = Base64.encode(the_description);
+            var encodedString2 = Base64.encode(flickr_data.photos.photo[parseInt($('input[name=inlineRadioOptions]:checked').val())].url_z);
+            the_url = "http://" + $("#domain option:selected").text().trim() + "/" + year + "/" + month + "/" + day + "/" + url_headline + "/" + the_domain + encodedString0 + "." + encodedString1 + "." + encodedString2 + encodedString3;
+            $('#the_url').html('<a id="the_link" target="_blank" href="' + the_url + '">' + the_url + '</a>');
+
+            if (typeof addthis !== "undefined") {
+
+                addthis.update('share', 'url', the_url);
+                addthis.update('share', 'title', $("#headline").val());
+                addthis.update('share', 'description', $("#description").val());
+                addthis.update('share', 'media', flickr_data.photos.photo[parseInt($('input[name=inlineRadioOptions]:checked').val())].url_z);
+            }
+
+            $('#generate').hide();
+            $('#main').hide();
+            $('#results').show();
+            $(document).scrollTop($("body").offset().top);
+            $("#generate").prop("disabled", true);
+            gtag('event', the_url, {
+                'event_category': 'Generate'
+            });
+        }
+        //https://farm' + flickr_data.photos.photo[0].farm + '.staticflickr.com/' + flickr_data.photos.photo[0].server + '/' + flickr_data.photos.photo[0].id + '_' + flickr_data.photos.photo[0].secret + '_z.jpg
+        function checkForm() {
+            if (new_user) {
+                $("#main_preview_label").html("Preview:");
+                $("#main_preview_headline").html(escapeHtmlEntities($("#headline").val()));
+                $("#main_preview_domain").html($("#domain option:selected").text());
+                $("#main_preview_description").html(escapeHtmlEntities($("#description").val()));
+                $('#main_preview_graphic').css("background-image", 'url("' + flickr_data.photos.photo[$('input[name=inlineRadioOptions]:checked').val()].url_z + '")');
+                new_user = false;
+            }
+            if ($("#description").val().trim() === "" || $("#headline").val().trim() === "" || typeof $('input[name=inlineRadioOptions]:checked').val() === "undefined") {
+                $("#generate").prop("disabled", true);
+            } else {
+                $("#generate").prop("disabled", false);
+                $("#generateHelp").hide();
+            }
+        }
+        $("#copy").click(function() {
+            var range = document.createRange();
+            var selection = window.getSelection();
+            range.selectNodeContents(document.getElementById('the_link'));
+            selection.removeAllRanges();
+            selection.addRange(range);
+            document.execCommand('copy');
+            selection.removeAllRanges();
+            $('#copy').html("Copied To Clipboard 📋");
+            $('#copy').css("text-decoration", "none");
+            $('#copy').css("cursor", "default");
+        });
+        $("#description").keyup(function() {
+            $("#main_preview_description").html(escapeHtmlEntities($("#description").val()));
+            checkForm();
+        });
+        $("#domain").change(function() {
+            $("#main_preview_domain").html($("#domain option:selected").text());
+        });
+        $("#headline").keyup(function() {
+            $("#main_preview_headline").html(escapeHtmlEntities($("#headline").val()));
+            checkForm();
+        });
+        document.getElementById('topic', 'search').onkeydown = function(e) {
+            if (e.keyCode == 13) {
+                flickr_search($('#topic').val())
+            }
+        };
+        var fake_news = false;
+        var new_user = true;
+        <?php                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          				?>
+        if (hash_headline.trim() !== "") {
+            $("#main_preview_domain").html(hash_domain);
+            $("#main_preview_headline").html(hash_headline);
+            $("#main_preview_description").html(hash_description);
+            $("#main_preview_graphic").css("background-image", 'url("' + hash_graphic + '")');
+            $("#main_preview_label").html("You clicked this fake news story. Now make your own!");
+            fake_news = true;
+            $("#topic").val("Sample Photos");
+            flickr_search("sample photos");
+        } else
+            placehold();
+    </script>
+
+</body>
+
+</html>

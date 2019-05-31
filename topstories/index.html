@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>The Fake News Generator</title>
+    <!-- <link href="https://fonts.googleapis.com/css?family=Maven+Pro" rel="stylesheet"> -->
+    <link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAAAAABWESUoAAABCElEQVQ4y2NgGAXUArrzoWC6+/z5ZQwMjG3zp+bCxNoYGRh8/sNA5f//T3gZmJ78/7MDJvSUiYHB4///v9+A4PvLQqDIdk6GG//frfv//zdI7Md5iIJjQkJCwgry/iA9m7gughVMU1CUExLmZwAruB4ZGRnMxOAJNnXrHbCCFgYGjogIL0awAhD4K8XgBbMZpKCdgUHr///HTHAFv8AKTm9HUqDx9/81iIJroWFhgZwgBbu490IVNDMwKMIV7IeECFDBYQahExAFszQ0POEKDsEVAFliz8EK/v39++8/WAEwoM5CFPhBWA+RAgrkSK1p0wohCnTALMbaaV1pU6eAwbQaxtG0SC0AACLI4fzl4acvAAAAAElFTkSuQmCC"
+    />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#000000" />
+
+
+    <meta property="og:title" content="The Fake News Generator" />
+    <meta property="og:url" content="https://www.thefakenewsgenerator.com" />
+    <meta property="og:description" content="Make fake news stories to fool your friends and maybe even the masses. From the creator of Push Trump Off A Cliff Again!" />
+    <meta property="og:image" content="https://www.thefakenewsgenerator.com/logo.png" />
+    <meta name="description" content="Make fake news stories to fool your friends and maybe even the masses. From the creator of Push Trump Off A Cliff Again!" />
+    <meta name="twitter:site" content="@TheFakeNewsGen" />
+    <meta name="twitter:card" content="photo" />
+    <meta property="fb:app_id" content="194118543987244" />
+    <link rel="stylesheet" type="text/css" href="/stylesheet.css" />
+    <script async src="//www.googletagmanager.com/gtag/js?id=UA-115759797-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-115759797-1');
+    </script>
+    <script type="text/javascript">
+        var addthis_config = {
+            "data_track_clickback": true
+        };
+    </script>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5aa34301f9144de2"></script>
+
+    <style>
+        #menu_2 {
+            border-bottom: 2px solid red;
+        }
+        
+        #menu_1 {
+            border: 0;
+        }
+    </style>
+
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-9969357671169601",
+            enable_page_level_ads: true
+        });
+    </script>
+
+</head>
+
+<body>
+    <div id="fb-root"></div>
+    <script>
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12&autoLogAppEvents=1&app_id=194118543987244';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12" id="header">
+                <h1><a href="https://www.thefakenewsgenerator.com/">The Fake News Generator</a></h1>
+                <h2>
+                    <a href="https://www.thefakenewsgenerator.com/" id="menu_1" class="ts">Main</a> <span class="sans">/</span> <a id="menu_2" class="ts" href="https://www.thefakenewsgenerator.com/topstories/">Top Stories</a><span class="sans">/</span>                    <a href="https://www.youtube.com/tonightat11" target="_blank">Tonight at 11 - YouTube</a></h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <!--  <div class="d-none d-md-block d-xl-none col-md-2 sides">            </div> -->
+            <div id="top_stories" class="col-12">
+
+                <?php
+                
+                $tweeted_urls = json_decode(file_get_contents('../json/tweeted.urls.json'), true);
+                
+$domains = array("cbsnews.us","thenewyorktimes.company","hannnity.com","theasociatedpress.com","microwavetinfoil.com","thefakenewsgenerator.com","tonightat11.tv","nbc-news.org","the-los-angeles-times.com","cbs-news.us");
+
+$total_stories = count($tweeted_urls);
+$stories_per_page = 20;
+
+if(isset($_GET['p'])){
+ 
+ $page_number = $_GET['p']-1;
+ 
+ }
+ else{
+ 
+$page_number = 0;
+
+}
+
+$offset = $stories_per_page * $page_number;
+$total_pages = round($total_stories / 20);
+if ($total_pages < (($total_stories / 20))){
+$total_pages = $total_pages + 1;
+}
+
+
+for ($i =  $total_stories - $offset - 1; ($i>=$total_stories-20-$offset && $i > 0); $i--)
+{
+
+if ($tweeted_urls[$i][3] === "" || $tweeted_urls[$i][1] < 150 )
+continue;
+
+if ($tweeted_urls[$i][6] === "")
+$high_score = "";
+else
+$high_score = " by ".$tweeted_urls[$i][6];
+
+$render_domain = $tweeted_urls[$i][2];
+$render_headline = $tweeted_urls[$i][3];
+$render_description = $tweeted_urls[$i][4];
+$render_graphic = $tweeted_urls[$i][5];
+$render_date = $tweeted_urls[$i][7];
+
+$render_url = "http://".$render_domain.$tweeted_urls[$i][0];
+
+echo '<div class="preview_wrapper topstories"><label class="preview_label">Posted on '.$render_date.':</label><div class="preview"><div class="preview_graphic" style="background-image: url(\''.$render_graphic.'\')" /></div><div class="preview_headline"><a href="'.$render_url.'" target="_blank">'.$render_headline.'</a></div><div class="preview_description">'.$render_description.'</div><div class="preview_domain">'.$render_domain.'</div><div class="addthis_toolbox addthis_default_style buttons" addthis:url="'.$render_url.'" addthis:title="'.$render_headline.'" addthis:description="'.$render_description.'" addthis:media="'.$render_graphic.'"><a class="addthis_button_facebook"></a><a class="addthis_button_twitter"></a><a class="addthis_button_compact"></a></div></div></div>';
+}
+ 
+?>
+
+
+
+            </div>
+            <!-- top stories-->
+        </div>
+        <!-- row -->
+
+        <div class="row" id="pagination">
+            <div class="col-12">
+
+
+
+
+                <?php
+                
+                
+                for($i = 1; $i <= $total_pages; $i++)
+                {
+                
+                if ($i === $page_number + 1)
+                {
+                echo '<b>';
+                }
+                
+                if ($i === 1)
+                {
+                  echo '<a href="/topstories/">'.$i.'</a>';
+                  }
+                  else
+                  {
+                
+                echo '<a href="/topstories/'.$i.'/">'.$i.'</a>';
+                }
+                
+                                if ($i === $page_number + 1)
+                {
+                echo '</b>';
+                }
+                
+                
+                
+                if ($total_pages > $i ) {
+                echo " | ";
+                }
+                
+                }
+                
+                
+                
+                ?>
+
+
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12" id="footer">
+                <h4> <span class="sans">&copy;</span> 2018 <a href="https://justinhook.com" target="_blank">Justin Hook</a></h4>
+                <div id="share_buttons">
+
+                    <div id="fb_button" class="fb-like" data-href="https://www.facebook.com/TheFakeNewsGenerator/" data-layout="button" data-action="like" data-size="large" data-show-faces="false">
+                    </div>
+                    <a href="https://twitter.com/TheFakeNewsGen?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @TheFakeNewsGen</a>
+                    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+                </div>
+                <!-- share -->
+            </div>
+            <!-- footer -->
+        </div>
+        <!-- Row -->
+    </div>
+    <!-- main wrapper-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>
